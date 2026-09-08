@@ -1,0 +1,203 @@
+/* Existing shared navigation; Profile below uses attributed upstream excerpts.
+   Navigation structure reference: Astro Nano, MIT, Mark Horn 2024-2025.
+   https://github.com/markhorn-dev/astro-nano
+   The complete notice is included by renderSiteHeader in site-shell.mjs. */
+.site-header {
+  color: #17212e;
+  background: #fff;
+  font: 400 15px/1.5 Arial, "Microsoft YaHei", sans-serif;
+  width: 100%;
+  border-bottom: 1px solid #d6e1ef;
+}
+.site-header-inner {
+  box-sizing: border-box;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding: 24px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+}
+.site-brand {
+  color: #0645ad;
+  font: 600 20px/1.5 Georgia, "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+.site-navigation-pending {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding-block: 6px;
+  color: #526176;
+  white-space: nowrap;
+  cursor: default;
+}
+.site-navigation-pending small { font-size: 11px; color: #526176; }
+.site-navigation-link {
+  color: #43536a;
+  font: inherit;
+  text-decoration: none;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+  padding: 6px 4px;
+  border-radius: 4px;
+}
+.site-navigation-link[aria-current="page"] {
+  color: #0645ad;
+  text-decoration: underline;
+}
+.site-brand:hover, .site-navigation-link:hover {
+  color: #0645ad;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.site-navigation-link:hover { background: #f0f5fc; }
+.site-blog-page .sidebar.left > .page-title { display: none; }
+.site-brand:focus-visible, .site-navigation-link:focus-visible,
+.site-blog-entry:focus-visible, .site-skip-link:focus-visible {
+  outline: 2px solid #0645ad;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+/*
+Profile composition adapted from:
+al-org-dev/al-folio-core fa58be03acad50a4a1ec566dc88280e73ab75d18
+  _layouts/about.liquid; _sass/_layout.scss; _sass/_variables.scss
+Yousa-Mirage/Tufted-Blog-Template 9688c47b951c390d25a809dc86bd9748c93282d9
+  assets/tufted.css (paragraphs, headings, navigation controls)
+edwardtufte/tufte-css v1.8.0 (Tufted's declared base dependency)
+  tufte.css (paragraph size/margins, title size, serif fallback)
+
+Adaptation: selectors scoped to Profile; Tufted's 10.5pt root equals 14px,
+so rem values are resolved to px without changing the Blog document root.
+al-folio's 930px container replaces the unused Tufte margin-note column.
+Existing white background, blue links and Chinese serif fallback retained.
+No identity/profile module, decorative call-to-action or remote font dependency.
+
+MIT License
+Copyright (c) 2025 Maruan Al-Shedivat.
+Copyright (c) 2025 Yousa-Mirage
+Copyright (c) 2014 Dave Liepmann
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+.site-profile-page {
+  margin: 0;
+  min-width: 280px;
+  min-height: 100svh;
+  color: #111;
+  background: #fff;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, "Noto Serif CJK SC", "Source Han Serif SC", SimSun, serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+.site-profile-main {
+  box-sizing: border-box;
+  max-width: 930px;
+  margin: 0 auto;
+  padding: 63px 32px 70px;
+}
+.site-profile-title {
+  margin: 0 0 21px;
+  color: #111;
+  font-size: 44.8px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1;
+}
+.site-profile-article { min-width: 0; }
+.site-language-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 0;
+}
+.site-language-button {
+  appearance: none;
+  border: 0;
+  border-radius: 2.8px;
+  padding: 0.2em 0.4em;
+  background: transparent;
+  color: #43536a;
+  font: inherit;
+  font-size: 21px;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+.site-language-button[aria-pressed="true"] {
+  color: #0645ad;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.site-language-button:hover { background: rgba(128, 128, 128, 0.2); }
+.site-language-button:focus-visible { outline: 2px solid #0645ad; outline-offset: 2px; }
+.site-language-controls[hidden], .site-language-panel[hidden] { display: none !important; }
+.site-language-panel { min-width: 0; overflow-wrap: anywhere; padding-block: 14px; }
+.site-language-panel p {
+  font-size: 19.6px;
+  margin-block: 19.6px;
+  padding-right: 0;
+  vertical-align: baseline;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  line-height: 30.8px;
+}
+.site-language-panel h2, .site-language-panel h3 {
+  color: #111;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.site-language-panel h2 { font-size: 32.2px; margin: 28px 0 14px; }
+.site-language-panel h3 { font-size: 28px; margin: 21px 0 11.2px; }
+.site-bio-text { white-space: pre-line; }
+.site-bio-children { margin-left: 1em; padding-left: 1em; border-left: 1px solid #e1e8f1; }
+.site-profile-article a { color: #0645ad; text-decoration: underline; }
+.site-skip-link {
+  position: absolute;
+  z-index: 100;
+  left: 20px;
+  top: 8px;
+  transform: translateY(-200%);
+  padding: 8px 12px;
+  background: #fff;
+  color: #0645ad;
+}
+.site-skip-link:focus { transform: translateY(0); }
+@media (max-width: 600px) {
+  .site-header-inner { padding: 20px; }
+  .site-profile-main { padding-inline: 20px; }
+  .site-navigation { gap: 8px 18px; }
+}
+@media (max-width: 760px) {
+  .site-language-panel p { hyphens: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-language-button { transition: none; }
+}

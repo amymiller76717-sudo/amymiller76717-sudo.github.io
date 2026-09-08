@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amymiller76717-sudo.github.io/sitemap.xml

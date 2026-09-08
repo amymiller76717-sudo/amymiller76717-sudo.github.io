@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile · 个人网站</title>
+  <meta name="description" content="个人简介 / About">
+  <link rel="stylesheet" href="/static/site-shell.css">
+  <script defer src="/static/site-profile.js"></script>
+</head>
+<body class="site-profile-page">
+  <a class="site-skip-link" href="#site-main">跳到正文</a>
+  <!-- Astro Nano navigation structure reference: https://github.com/markhorn-dev/astro-nano
+MIT License
+Copyright (c) 2024-2025 Mark Horn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-brand" href="/">个人网站</a>
+    <nav class="site-navigation" aria-label="全站导航">
+      <a class="site-navigation-link" href="/profile" aria-current="page">Profile</a>
+      <a class="site-navigation-link" href="/blog/">Blog</a>
+      <span class="site-navigation-pending" role="link" aria-disabled="true">Projects <small>筹备中</small></span>
+      <span class="site-navigation-pending" role="link" aria-disabled="true">Resources <small>筹备中</small></span>
+    </nav>
+  </div>
+</header>
+  <main class="site-profile-main" id="site-main">
+    <!-- al-folio about.liquid: post header followed by article; profile module disabled. -->
+    <div class="site-profile-post" data-site-profile>
+      <header class="site-profile-heading">
+        <h1 class="site-profile-title">个人简介</h1>
+      </header>
+      <article class="site-profile-article">
+
+      <nav class="site-language-controls" aria-label="简介语言" hidden>
+  <button type="button" class="site-language-button" data-site-language="zh-CN" aria-controls="site-profile-zh">中文</button>
+  <button type="button" class="site-language-button" data-site-language="en" aria-controls="site-profile-en">English</button>
+</nav>
+      <section class="site-language-panel" id="site-profile-zh" lang="zh-CN" aria-label="中文简介">
+    
+    <div class="site-bio-block"><p class="site-bio-text">南方科技大学学生，关注学习工具，以及认知科学方法（例如间隔重复）在个人知识管理（PKM）与教育科技（EdTech）中的应用。</p></div>
+  </section>
+<section class="site-language-panel" id="site-profile-en" lang="en" aria-label="English biography">
+    
+    <div class="site-bio-block"><p class="site-bio-text">SUSTech student interested in learning tools and the use of cognitive-science-based methods(exemplified by spaced repetition)in personal knowledge management (PKM) and educational technology (EdTech).</p></div>
+  </section>
+
+      </article>
+    </div>
+  </main>
+</body>
+</html>
