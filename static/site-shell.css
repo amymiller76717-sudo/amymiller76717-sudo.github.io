@@ -201,3 +201,81 @@ SOFTWARE.
 @media (prefers-reduced-motion: reduce) {
   .site-language-button { transition: none; }
 }
+
+/* Pinned Tufted navigation and typography; see frontend-design-sources.md. */
+/* Site header and footer should have consistent styling */
+.site-header {
+	font-size: 15.4px;
+	color: #666;
+	line-height: 1.6;
+}
+
+.site-header {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+
+
+.site-header nav {
+	display: flex;
+	gap: 1em;
+}
+
+.site-header nav > p {
+	display: flex;
+	gap: inherit;
+	margin: 0;
+	flex-wrap: wrap;
+}
+
+.site-header .site-navigation a:any-link {
+	text-decoration: none;
+	border-bottom: 0;
+	box-shadow: none;
+	font-size: 21px;
+	padding: 0.2em 0.4em;
+	margin-top: 1em;
+	border-radius: var(--radius-sm);
+	transition: background-color 120ms ease;
+}
+
+.site-header .site-navigation a:hover,
+.site-header .site-navigation a:focus-visible {
+	background: var(--highlight-weak);
+	outline: 2px solid #0645ad;
+}
+
+
+.site-header { --radius-sm: 2.8px; --highlight-weak: rgba(128,128,128,.2); font-family: inherit; border-bottom: 0; }
+.site-header-inner { max-width: 930px; }
+.site-header .site-navigation a:any-link { color: #0645ad; }
+.site-header .site-navigation a[aria-current="page"] { text-decoration: underline; }
+.site-blog-page { font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, "Noto Serif CJK SC", "Source Han Serif SC", SimSun, serif; }
+.site-blog-page .article-title { 
+    font-weight: 400;
+    margin-bottom: 21px;
+    font-size: 44.8px;
+    line-height: 1;
+
+	font-style: normal;
+	font-weight: bold;
+	color: #111;
+ }
+.site-blog-page .reading-outline, .site-resources-page article > p, .site-resources-page [data-resource-description], .site-resources-page [data-project-description] { 
+    font-size: 19.6px;
+    line-height: 28px;
+ 
+	line-height: 30.8px;
+ }
+.site-blog-page .reading-outline ul { 
+	line-height: 30.8px;
+ }
+.site-blog-page .outline-controls { font-size: 17px; }
+.site-resources-page .post-description, .site-resources-page [data-resource-meta], .site-resources-page [data-resource-test], .site-resources-page [data-project-test] { 
+	color: var(--theme-text, #111);
+	font-size: 16.8px;
+	line-height: 1.5;
+	opacity: 0.7;
+ }
+@media (prefers-reduced-motion: reduce) { .site-header .site-navigation a:any-link { transition: none; } }
