@@ -103,3 +103,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   overflow-wrap: anywhere;
   min-width: 0;
 }
+
+.site-resources-page .links a.btn {
+  display: inline-block;
+}
