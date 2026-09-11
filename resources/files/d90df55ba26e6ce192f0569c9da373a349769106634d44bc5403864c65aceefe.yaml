@@ -1,7 +1,0 @@
-notice: "格式测试样本 / Format test only"
-synthetic: true
-records:
-  - name: Sample A
-    quantity: 10
-  - name: Sample B
-    quantity: 20
