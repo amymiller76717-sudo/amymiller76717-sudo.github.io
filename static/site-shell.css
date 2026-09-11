@@ -340,6 +340,7 @@ SOFTWARE.
 .site-blog-page .reading-outline ul { 
 	line-height: 30.8px;
  }
+.site-blog-page .reading-outline, .site-blog-page .reading-outline ul { line-height:1.45; }
 .site-blog-page .outline-controls { font-size: 17px; }
 .site-resources-page .post-description, .site-resources-page [data-resource-meta], .site-resources-page [data-resource-test], .site-resources-page [data-project-test] { 
 	color: var(--theme-text, #111);
