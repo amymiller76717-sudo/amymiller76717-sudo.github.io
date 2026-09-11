@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Profile · 个人网站</title>
-  <meta name="description" content="个人简介 / About">
+  <meta name="description" content="个人简介 · About me">
   <link rel="stylesheet" href="/static/site-shell.css">
   <script defer src="/static/site-profile.js"></script>
 </head>
@@ -43,28 +43,53 @@ SOFTWARE. -->
   </div>
 </header>
   <main class="site-profile-main" id="site-main">
-    <!-- al-folio about.liquid: post header followed by article; profile module disabled. -->
-    <div class="site-profile-post" data-site-profile>
-      <header class="site-profile-heading">
-        <h1 class="site-profile-title">个人简介</h1>
-      </header>
-      <article class="site-profile-article">
+    <!-- Pinned al-folio about.liquid; optional identity and content modules disabled. -->
+    <div class="post site-profile-post" data-site-profile>
+  <header class="post-header site-profile-heading">
+    <h1 class="post-title site-profile-title">Profile</h1>
+    <p class="desc site-profile-description">个人简介 · About me</p>
+  </header>
 
-      <nav class="site-language-controls" aria-label="简介语言" hidden>
+  <article class="site-profile-article">
+    
+
+    <div class="clearfix site-profile-content"><nav class="site-language-controls" aria-label="简介语言" hidden>
   <button type="button" class="site-language-button" data-site-language="zh-CN" aria-controls="site-profile-zh">中文</button>
   <button type="button" class="site-language-button" data-site-language="en" aria-controls="site-profile-en">English</button>
 </nav>
-      <section class="site-language-panel" id="site-profile-zh" lang="zh-CN" aria-label="中文简介">
+<section class="site-language-panel" id="site-profile-zh" lang="zh-CN" aria-label="中文简介">
     
-    <div class="site-bio-block"><p class="site-bio-text">南方科技大学学生，关注学习工具，以及认知科学方法（例如间隔重复）在个人知识管理（PKM）与教育科技（EdTech）中的应用。</p></div>
+    <p>南方科技大学学生，关注学习工具，以及认知科学方法（例如间隔重复）在个人知识管理（PKM）与教育科技（EdTech）中的应用。</p>
   </section>
 <section class="site-language-panel" id="site-profile-en" lang="en" aria-label="English biography">
     
-    <div class="site-bio-block"><p class="site-bio-text">SUSTech student interested in learning tools and the use of cognitive-science-based methods(exemplified by spaced repetition)in personal knowledge management (PKM) and educational technology (EdTech).</p></div>
-  </section>
+    <p>SUSTech student interested in learning tools and the use of cognitive-science-based methods(exemplified by spaced repetition)in personal knowledge management (PKM) and educational technology (EdTech).</p>
+  </section></div>
 
-      </article>
-    </div>
+    <!-- News -->
+    
+
+    <!-- Latest posts -->
+    
+
+    <!-- Selected papers -->
+    
+
+    <!-- Social -->
+    
+      <div class="social site-profile-social">
+        <div class="contact-icons links site-profile-links" aria-label="相关链接"><a class="btn" href="/blog/">Blog</a>
+<a class="btn" href="/projects/">Projects</a>
+<a class="btn" href="/resources/">Resources</a></div>
+
+        
+      </div>
+    
+
+    
+  </article>
+</div>
+
   </main>
 </body>
 </html>

@@ -82,7 +82,8 @@ Adaptation: selectors scoped to Profile; Tufted's 10.5pt root equals 14px,
 so rem values are resolved to px without changing the Blog document root.
 al-folio's 930px container replaces the unused Tufte margin-note column.
 Existing white background, blue links and Chinese serif fallback retained.
-No identity/profile module, decorative call-to-action or remote font dependency.
+Profile adds the pinned about subtitle/social component and publication link
+buttons when explicitly supplied by its Markdown fields. No remote font dependency.
 
 MIT License
 Copyright (c) 2025 Maruan Al-Shedivat.
@@ -108,6 +109,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 .site-profile-page {
+  --global-theme-color: #0645ad;
+  --global-text-color: #111;
+  --global-bg-color: #fff;
   margin: 0;
   min-width: 280px;
   min-height: 100svh;
@@ -179,6 +183,13 @@ SOFTWARE.
 .site-bio-text { white-space: pre-line; }
 .site-bio-children { margin-left: 1em; padding-left: 1em; border-left: 1px solid #e1e8f1; }
 .site-profile-article a { color: #0645ad; text-decoration: underline; }
+/* Bind al-folio social links to readable text buttons instead of icon fonts.
+   The inherited Tufted byline size is used for labels; button border/padding and
+   the social alignment are compiled directly from the pinned upstream files. */
+.site-profile-page .site-profile-social .site-profile-links.contact-icons { font-size: 16.8px; line-height: 1.5; }
+.site-profile-page .site-profile-links a.btn { display: inline-block; text-decoration: none; }
+.site-profile-page .site-profile-links a:focus-visible, .site-profile-page .site-language-panel a:focus-visible { outline: 2px solid #0645ad; outline-offset: 3px; }
+.site-profile-page .site-language-panel img { max-width: 100%; height: auto; }
 .site-skip-link {
   position: absolute;
   z-index: 100;
@@ -246,6 +257,64 @@ SOFTWARE.
 	outline: 2px solid #0645ad;
 }
 
+.site-profile-page .site-profile-social {
+  text-align: center;
+}
+
+.site-profile-page .site-profile-social .contact-icons {
+  font-size: 56px;
+}
+
+.site-profile-page .site-profile-social .contact-icons a img {
+  width: 44.8px;
+  height: 44.8px;
+  margin-bottom: 14px;
+}
+
+.site-profile-page .site-profile-social .contact-icons a svg {
+  width: 49px;
+  height: 56px;
+  margin-bottom: 7px;
+}
+
+.site-profile-page .site-profile-social .contact-icons a svg image {
+  width: 49px;
+  height: 49px;
+}
+
+.site-profile-page .site-profile-social .contact-icons a i:before {
+  color: var(--global-text-color);
+  transition-property: all .2s ease-in-out;
+}
+
+.site-profile-page .site-profile-social .contact-icons a:hover {
+  text-decoration: none;
+}
+
+.site-profile-page .site-profile-social .contact-icons a:hover i:before {
+  color: var(--global-theme-color);
+}
+
+.site-profile-page .site-profile-social .contact-note {
+  font-size: 11.2px;
+}
+
+.site-profile-page .site-profile-links a.btn {
+  color: var(--global-text-color);
+  border: 1px solid var(--global-text-color);
+  margin-left: 0;
+  padding: 3.5px 14px;
+}
+
+.site-profile-page .site-profile-links a.btn:hover {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+}
+
+.site-profile-page .site-profile-links a.award.btn {
+  border-color: var(--global-highlight-color);
+}
+
 
 .site-header { --radius-sm: 2.8px; --highlight-weak: rgba(128,128,128,.2); font-family: inherit; border-bottom: 0; }
 .site-header-inner { max-width: 930px; }
@@ -277,5 +346,75 @@ SOFTWARE.
 	font-size: 16.8px;
 	line-height: 1.5;
 	opacity: 0.7;
+ }
+.site-profile-page .site-profile-description { 
+	margin: -5.6px 0 22.4px;
+	color: var(--theme-text, #111);
+	font-size: 16.8px;
+	line-height: 1.5;
+	opacity: 0.7;
+ }
+.site-profile-page .site-language-panel ul, .site-profile-page .site-language-panel ol, .site-profile-page .site-language-panel dl { 
+    font-size: 19.6px;
+    line-height: 28px;
+ 
+	line-height: 30.8px;
+ }
+.site-profile-page .site-language-panel h2 {
+	font-size: 32.2px;
+	line-height: 1.2;
+	margin-top: 28px;
+	margin-bottom: 14px;
+}
+.site-profile-page .site-language-panel h3 {
+	font-size: 28px;
+	line-height: 1.2;
+	margin-top: 21px;
+	margin-bottom: 11.2px;
+}
+.site-profile-page .site-language-panel h4 {
+	font-size: 24.5px;
+	line-height: 1.2;
+	margin-top: 16.8px;
+	margin-bottom: 7px;
+}
+.site-profile-page .site-language-panel h5 {
+	font-size: 21px;
+	line-height: 1.2;
+	margin-top: 14px;
+	margin-bottom: 7px;
+}
+.site-profile-page .site-language-panel code { 
+	font-size: 16.8px;
+	background-color: #f7f7f7;
+	padding: 0.1em 0.3em;
+	border-radius: 3px;
+	border: 1px solid #e7e7e7;
+ }
+.site-profile-page .site-language-panel pre { 
+	position: relative;
+	background-color: #f7f7f7;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	padding: 1em;
+	padding-bottom: 0.5em;
+	overflow-x: auto;
+	margin-bottom: 1.5em;
+	margin-left: 0;
+	margin-right: 0;
+	float: none;
+	clear: none;
+	box-sizing: border-box;
+	left: 0;
+ }
+.site-profile-page .site-language-panel pre > code { 
+	width: 95%;
+	font-size: 16.8px;
+	line-height: 1.5;
+	margin-left: 0%;
+	background-color: transparent;
+	padding: 0;
+	padding-bottom: 0.7em;
+	border: none;
  }
 @media (prefers-reduced-motion: reduce) { .site-header .site-navigation a:any-link { transition: none; } }
