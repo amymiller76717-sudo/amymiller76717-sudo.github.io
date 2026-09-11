@@ -321,7 +321,7 @@ SOFTWARE.
 .site-header .site-navigation a:any-link { color: #0645ad; }
 .site-header .site-navigation a[aria-current="page"] { text-decoration: underline; }
 .site-blog-page { font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, "Noto Serif CJK SC", "Source Han Serif SC", SimSun, serif; }
-.site-blog-page .article-title { 
+.site-blog-page .article-title, .site-blog-page .reading-outline .document-current > .document-title:not(.document-title-rich) { 
     font-weight: 400;
     margin-bottom: 21px;
     font-size: 44.8px;
