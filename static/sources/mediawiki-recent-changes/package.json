@@ -1,0 +1,9 @@
+{
+  "name": "personalwebsite-mediawiki-recent-changes",
+  "private": true,
+  "type": "module",
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+    "lightningcss": "1.31.1"
+  }
+}

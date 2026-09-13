@@ -1,0 +1,117 @@
+/* MediaWiki classic Recent Changes, GPL-2.0-or-later.
+ * Corresponding source and license: /static/sources/mediawiki-recent-changes/README.md
+ * Pinned revision: e6ba9b6dff50b451a0d25b858eda3946cf9171b0.
+ */
+.site-recent-changes-page .mw-changeslist {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.site-recent-changes-page .mw-changeslist a {
+  color: #0645ad;
+  background: none;
+  text-decoration: none;
+}
+
+.site-recent-changes-page .mw-changeslist a:not([href]) {
+  cursor: pointer;
+}
+
+.site-recent-changes-page .mw-changeslist a:visited {
+  color: #0b0080;
+}
+
+.site-recent-changes-page .mw-changeslist a:active {
+  color: #faa700;
+}
+
+.site-recent-changes-page .mw-changeslist a:hover, .site-recent-changes-page .mw-changeslist a:focus {
+  text-decoration: underline;
+}
+
+.site-recent-changes-page .mw-changeslist h4 {
+  color: #000;
+  word-break: break-word;
+  margin: 0 0 .3em;
+  padding-top: .5em;
+  padding-bottom: .17em;
+  font-size: 116%;
+  font-weight: bold;
+  display: flow-root;
+}
+
+.site-recent-changes-page .mw-changeslist ul {
+  margin-top: .3em;
+  margin-bottom: 0;
+  margin-inline: 1.6em 0;
+  padding: 0;
+}
+
+.site-recent-changes-page .mw-changeslist li {
+  margin-bottom: .1em;
+}
+
+.site-recent-changes-page .mw-changeslist p {
+  margin: .4em 0 .5em;
+}
+
+.site-recent-changes-page .mw-changeslist p img {
+  margin: 0;
+}
+
+.site-recent-changes-page .mw-changeslist .newpage {
+  font-weight: bold;
+}
+
+.site-recent-changes-page .mw-changeslist span.comment {
+  unicode-bidi: -moz-isolate;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  unicode-bidi: isolate;
+  font-style: italic;
+}
+
+.site-recent-changes-page .mw-changeslist .mw-changeslist-separator:empty:before {
+  content: ". .";
+}
+
+.site-recent-changes-page .mw-changeslist .mw-changeslist-separator--semicolon:before {
+  content: ";";
+}
+
+.site-recent-changes-page .mw-changeslist .mw-tag-marker, .site-recent-changes-page .mw-changeslist .mw-title {
+  unicode-bidi: embed;
+}
+
+.site-recent-changes-page .mw-changeslist .mw-plusminus-pos, .site-recent-changes-page .mw-changeslist .mw-plusminus-neg, .site-recent-changes-page .mw-changeslist .mw-plusminus-null {
+  unicode-bidi: -moz-isolate;
+  unicode-bidi: isolate;
+}
+
+.site-recent-changes-page .mw-changeslist .mw-input-with-label {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.recent-changes-entry a {
+  color: #0645ad;
+  background: none;
+  text-decoration: none;
+}
+
+.recent-changes-entry a:not([href]) {
+  cursor: pointer;
+}
+
+.recent-changes-entry a:visited {
+  color: #0b0080;
+}
+
+.recent-changes-entry a:active {
+  color: #faa700;
+}
+
+.recent-changes-entry a:hover, .recent-changes-entry a:focus {
+  text-decoration: underline;
+}

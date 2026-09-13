@@ -1,0 +1,71 @@
+{
+  "schema": "pinned-design-source-v1",
+  "repository": "https://github.com/wikimedia/mediawiki",
+  "officialRepository": "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/",
+  "commit": "e6ba9b6dff50b451a0d25b858eda3946cf9171b0",
+  "branch": "REL1_43",
+  "license": "GPL-2.0-or-later",
+  "files": [
+    {
+      "file": "mediawiki-COPYING",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/COPYING",
+      "sha256": "ea5429175b5ed3b83131d2a3b848ef1bd0142a6192e1027be9e1efaf031a3928"
+    },
+    {
+      "file": "mediawiki-OldChangesList.php",
+      "path": "includes/recentchanges/OldChangesList.php",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/includes/recentchanges/OldChangesList.php",
+      "sha256": "632899670d2b145be05b23e31d3f1420c261efbfff08c5f692880df06f0ec159"
+    },
+    {
+      "file": "mediawiki-ChangesList.php",
+      "path": "includes/recentchanges/ChangesList.php",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/includes/recentchanges/ChangesList.php",
+      "sha256": "119fc2912ef57a58ae1e11551b44337625786742ce67793cc00f93eaf232bbfc"
+    },
+    {
+      "file": "mediawiki-changeslist.less",
+      "path": "resources/src/mediawiki.special.changeslist/changeslist.less",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/resources/src/mediawiki.special.changeslist/changeslist.less",
+      "sha256": "115000cb401c70feb55c5df1cf698f283aee426eb9cb66ff85d9a9b1904733d2"
+    },
+    {
+      "file": "mediawiki-elements.less",
+      "path": "resources/src/mediawiki.skinning/elements.less",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/resources/src/mediawiki.skinning/elements.less",
+      "sha256": "bf35c363d5cbf85ff76baf4d9212900c60a07e904bf01e98dd3e247ffbb15357"
+    },
+    {
+      "file": "mediawiki-linker.styles.less",
+      "path": "resources/src/mediawiki.interface.helpers.styles/linker.styles.less",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/resources/src/mediawiki.interface.helpers.styles/linker.styles.less",
+      "sha256": "834c9e61d1f4e33007c9ffa89966d51fbeaeddb40c246c720764f3e12ea5dd93"
+    },
+    {
+      "file": "mediawiki-skinStyles.less",
+      "path": "resources/src/mediawiki.interface.helpers.styles/skinStyles.less",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/resources/src/mediawiki.interface.helpers.styles/skinStyles.less",
+      "sha256": "1ea74644479c799ec59dc98b73a001f82213e8cc9897b8d37a976ad74327e01e"
+    },
+    {
+      "file": "mediawiki-skin.defaults.less",
+      "path": "resources/src/mediawiki.less/mediawiki.skin.defaults.less",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/resources/src/mediawiki.less/mediawiki.skin.defaults.less",
+      "sha256": "0be115737201cccc960cd5f9da6aeb59b97f8a1b7579411656b1d7bfbcea392a"
+    },
+    {
+      "file": "mediawiki-mixins.less",
+      "path": "resources/src/mediawiki.less/mediawiki.mixins.less",
+      "url": "https://raw.githubusercontent.com/wikimedia/mediawiki/e6ba9b6dff50b451a0d25b858eda3946cf9171b0/resources/src/mediawiki.less/mediawiki.mixins.less",
+      "sha256": "6ca67a6a7dece6ea32c07b19d3d51bbc7af9350f5c3aa9ec7d82c1ae0be65d53"
+    }
+  ],
+  "adaptations": [
+    "Bind static published document records to the classic OldChangesList DOM.",
+    "Omit unsupported diff/history/user/patrol controls instead of creating placeholder actions.",
+    "Scope original content, list, link, separator and comment rules to the Recent Changes component.",
+    "Resolve only used skin-default variables and the left-to-right margin-inline mixin.",
+    "Use semantic time elements and Asia/Shanghai labels without changing upstream layout."
+  ]
+}
