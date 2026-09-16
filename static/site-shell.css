@@ -9,6 +9,9 @@
   width: 100%;
   border-bottom: 1px solid #d6e1ef;
 }
+.site-blog-page .blog-category-index > .site-header[hidden] {
+  display: none;
+}
 .site-header-inner {
   box-sizing: border-box;
   max-width: 1080px;
