@@ -139,6 +139,16 @@ SOFTWARE.
   line-height: 1;
 }
 .site-profile-article { min-width: 0; }
+.site-profile-article-rows { margin-top: 2em; }
+.site-profile-article-row { display: grid; grid-template-columns: minmax(0, 8em) minmax(0, 1fr); gap: 1em; align-items: start; margin-top: 1.5em; }
+.site-profile-article-row > h2 { margin: 0; font-size: 21px; line-height: 1.6; font-weight: normal; }
+.site-profile-article-row > .site-header { margin: 0; min-width: 0; }
+.site-profile-article-row .site-navigation { flex-wrap: wrap; }
+.site-profile-page .site-profile-article-row .site-navigation a:any-link { margin-top: 0; max-width: 100%; overflow-wrap: anywhere; }
+.site-profile-article-empty { margin: 0; color: #666; line-height: 1.6; }
+@media (max-width: 600px) {
+  .site-profile-article-row { grid-template-columns: minmax(0, 1fr); gap: .4em; }
+}
 .site-language-controls {
   display: flex;
   flex-wrap: wrap;
