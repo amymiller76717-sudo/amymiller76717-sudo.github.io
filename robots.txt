@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /preview/outline/
-Sitemap: https://amymiller76717-sudo.github.io/sitemap.xml
+Sitemap: https://rowan-memoedu.github.io/sitemap.xml
